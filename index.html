@@ -13,13 +13,49 @@
         <header id = 'header'>
             <h3>National Park Search</h3>
         </header>
-        <input type="text" id ='parkSearch'>`
+        <input type="text" id ='parkSearch'>
         <button id = 'submitSearch'>🔎︎</button>
     </section>
-    <map>
-        <img src="./assets/pics/Map.PNG" alt="US Map with Park Locations">
-    </map>
 
-    <script src="./assets/script.js"></script>
+    <div id='map'></div>
+
+    
+    <h2>Bottom Modal</h2>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+        <h2>Modal Header</h2>
+        </div>
+        <div class="modal-body">
+            <p>Some text in the Modal Body</p>
+            <p>Some other text...</p>
+        </div>
+        <div class="modal-footer">
+            <h3>Modal Footer</h3>
+        </div>
+    </div>
+
+   <!--- </div> --> 
+
+
+
+   <script
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApqZRVmuHP-PgyWy54eLsb6lOxuxlm0lQ&callback=initMap&libraries=&v=weekly"
+ ></script>
+
+ <script src="./assets/script.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+ integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+ crossorigin="anonymous" 
+ referrerpolicy="no-referrer"></script>
+
 </body>
 </html>
