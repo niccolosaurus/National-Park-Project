@@ -8,37 +8,63 @@ var NPSwebsite = 'https://developer.nps.gov/api/v1/';
 
 initMap();
 
-var parkChoice = JSON.parse(localStorage.getItem("parkChoice"));
+//Use the code below in any function to pull the Nation Parks object.  Function must be "async".
+// var natParks = await pullNPSapi();
 
+//Make textbox blank instead of undefined
 if (parkChoice) {
-     parkChoice = "";
- }
+  parkChoice = "";
+}
 
- console.log(parkChoice);
+//Fetch National Parks list from 
+async function pullNPSapi() {
 
- submitSearch.addEventListener('click', function(event){
+  var response = await fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI');
+  var data = await response.json();
+
+  console.log(data);
+  return data;
+}
+
+function submit() {
+
+  if (parkSearch.value == "") {
+    return;
+}else {
+    console.log(NPSwebsite + 'parks?q=' + parkSearch.value + '&api_key=' + APIkey); 
+
+    window.location.replace('./assets/result.html' + '?code=' + parkSearch.value);
+}
+}
+
+
+//Search on Enter key
+submitSearch.addEventListener('keyup', function(event) {
+  if (event.keyCode === 13) {
     event.preventDefault;
 
-    if (parkSearch.value == "") {
-        return;
-    }else {
-        console.log(NPSwebsite + 'parks?q=' + parkSearch.value + '&api_key=' + APIkey); 
-        
-        localStorage.setItem("parkChoice", JSON.stringify(parkSearch.value));
+    submit();
 
-        //window.location.replace('./assets/result.html' + '?code=' + parkSearch.value);
-    }
+  }
+});
+
+//Search on clicking Search button
+submitSearch.addEventListener('click', function(event){
+  event.preventDefault;
+
+  submit();  
     
-    
- });
+});
 
- function initMap() {
-    var options = {
-        zoom:8,
-        center: {lat:32.7157,lng:-117.1611}
-    }
+async function initMap() {
+  var options = {
+      zoom:8,
+      center: {lat:32.7157,lng:-117.1611}
+  }
 
-    var map = new google.maps.Map(document.getElementById('map'), options);
+  var map = new google.maps.Map(document.getElementById('map'), options);
+
+  var natParks = await pullNPSapi();
 }
 
 
