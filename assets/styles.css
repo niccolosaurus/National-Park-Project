@@ -61,36 +61,42 @@ map img {
     background-color: rgb(161, 236, 161);
     opacity: .5;
     display: flex;
-    justify-content: flex-start;
-    
+    justify-content: start;
   text-align: center;
-    width: 4vw;
-    height: 4vh;
-    font-size: larger
-    
-   
+    width: 20px;
+    height: 20px;
+    font-size: large;
     
 }
-button{
-     align-self: flex-start;
-      }
+.button {
+  align-self: flex-start;
+}
 
 #maincontainer {
-    display: flex;
-    justify-content: flex-start;
-    height: 600px;
-    width: 400px;
-    text-align: center;
-    
-    flex-direction: column;
-
+   display: flex;
+   justify-content: space-between;
+}
+#parkcontainer {
+  display: inline-block;
+  flex-direction: row;
+  
+justify-content: center;
+  width: 30%;
+  height: 200px;
+  text-align: center;
+  background-color: #5cb85c;
+  opacity: .5;
 }
 #sidecontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    display: inline-block;
+    justify-content: center;
+    flex-direction: row;
+   
     height: 200px;
-    
+    width: 40%;
+    text-align: center;
+    background-color: #5cb85c;
+  opacity: .5;
 }
 
 #map{
