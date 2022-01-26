@@ -35,25 +35,54 @@ const eqfeed_callback = function (results) {
   }
 };
 
-// async function pullNPSapi() {
-//   var response = await fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI');
-//   var data = await response.json();
-//   console.log(data);
-//   return data;
-// }
 
 //Use the code below in any function to pull the Nation Parks object.  Function must be "async".
 // var natParks = await pullNPSapi();
-//Fetch National Parks list from
-async function pullNPSapi() {
-  var response = await fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI');
-  var data = await response.json();
-  console.log(data);
 
-return data;
-
+//Make textbox blank instead of undefined
+if (parkChoice) {
+  parkChoice = "";
 }
 
+//Fetch National Parks list from 
+async function pullNPSapi() {
+
+  var response = await fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI');
+  var data = await response.json();
+
+  console.log(data);
+  return data;
+}
+
+function submit() {
+
+  if (parkSearch.value == "") {
+    return;
+}else {
+    console.log(NPSwebsite + 'parks?q=' + parkSearch.value + '&api_key=' + APIkey); 
+
+    window.location.replace('./assets/result.html' + '?code=' + parkSearch.value);
+}
+}
+
+
+//Search on Enter key
+submitSearch.addEventListener('keyup', function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault;
+
+    submit();
+
+  }
+});
+
+//Search on clicking Search button
+submitSearch.addEventListener('click', function(event){
+  event.preventDefault;
+
+  submit();  
+    
+});
 
 
 async function natParks(data) {
@@ -69,6 +98,7 @@ for (let i=0; i < data.data.length; i++) {
   }); 
 }
  return results;
+
 }
 
 async function start() {
