@@ -1,24 +1,48 @@
 var APIkey = 'YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI';
 var website = 'developer.nps.gov/api/v1/';
 var APItemplate = "https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI"
+const iconBase ="https://developers.google.com/maps/documentation/javascript/examples/full/images/"
+const treeIcon= "https://img.icons8.com/color/48/000000/deciduous-tree.png"
 
 let map;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 2,
-    center: new google.maps.LatLng(2.8, -187.3),
+    zoom: 4,
+    center: new google.maps.LatLng(37.0902, -95.7129),
     mapTypeId: "terrain",
   });
 
-  // Create a <script> tag and set the USGS URL as the source.
-  const script = document.createElement("script");
+  async function fetchParksJSON() {
+    const response = await fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI')
+  
+    const parks = await response.json();
+    return parks;
+  }
+  
+  fetchParksJSON().then(parks => {
+   parks; // fetched parks
+   console.log(parks.data)
+   let parkData = parks.data
+   for (let i=0; i < parkData.length; i++) {
+    let name = parkData[i].fullName
+    let lat = parseFloat(parkData[i].latitude)
+    let long = parseFloat(parkData[i].longitude)
+    
+    let coords = { lat: lat, lng: long };
+  
+  
+    new google.maps.Marker({
+      position: coords,
+      map: map,
+      title: name,
+      icon: treeIcon
+    });
+    }
+  
+  });
 
-  // This example uses a local copy of the GeoJSON stored at
-  // http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
-  script.src =
-    "https://developer.nps.gov/api/v1/parks?limit=500&api_key=YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI";
-  document.getElementsByTagName("head")[0].appendChild(script);
+
 }
 
 // Loop through the results array and place a marker for each
@@ -35,24 +59,9 @@ const eqfeed_callback = function (results) {
   }
 };
 
-// async function pullNPSapi() {
-//   var response = await fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI');
-//   var data = await response.json();
-//   console.log(data);
-//   return data;
-// }
 
-//Use the code below in any function to pull the Nation Parks object.  Function must be "async".
-// var natParks = await pullNPSapi();
-//Fetch National Parks list from
-async function pullNPSapi() {
-  var response = await fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI');
-  var data = await response.json();
-  console.log(data);
 
-return data;
 
-}
 
 
 
@@ -71,14 +80,22 @@ for (let i=0; i < data.data.length; i++) {
  return results;
 }
 
-async function start() {
-  let data = await pullNPSapi();
-  let response = await natParks(data);
-  console.log(response);
-}
+// function start() {
+//   // let markerData = pullNPSapi();
+//   // console.log(markerData)
+//   // let response = natParks(markerData);
+//   // console.log(response);
+//   // return response;
+// }
 
-start();
+// // start();
 
+// console.log(start());
+
+// let markerData = start().then(function(res) {
+//   console.log('res', res)
+//   return res;
+// });
 
 
 

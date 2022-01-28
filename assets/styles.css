@@ -41,13 +41,13 @@ body {
 }
 
 map img {
-    width: 70%;
+    width: 50%;
 }
 #nav {
     display: flex;
     justify-content: center;
     align-content: center;
-    width: 100%;
+    width: 75%;
     text-align: center;
     background-color: rgba(46, 107, 46, 0.5);
     font-size: larger;
