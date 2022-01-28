@@ -35,6 +35,7 @@ const eqfeed_callback = function (results) {
   }
 };
 
+
 //Use the code below in any function to pull the Nation Parks object.  Function must be "async".
 // var natParks = await pullNPSapi();
 
@@ -83,26 +84,6 @@ submitSearch.addEventListener('click', function(event){
     
 });
 
-// async function pullNPSapi() {
-//   var response = await fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI');
-//   var data = await response.json();
-//   console.log(data);
-//   return data;
-// }
-
-//Use the code below in any function to pull the Nation Parks object.  Function must be "async".
-// var natParks = await pullNPSapi();
-//Fetch National Parks list from
-async function pullNPSapi() {
-  var response = await fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI');
-  var data = await response.json();
-  console.log(data);
-
-return data;
-
-}
-
-
 
 async function natParks(data) {
 // var data = await pullNPSapi();
@@ -117,6 +98,7 @@ for (let i=0; i < data.data.length; i++) {
   }); 
 }
  return results;
+
 }
 
 async function start() {
