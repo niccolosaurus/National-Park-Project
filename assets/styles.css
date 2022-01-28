@@ -63,29 +63,28 @@ map img {
 #return {
     background-color: rgb(161, 236, 161);
     opacity: .5;
-    display: flex;
-    justify-content: start;
-  text-align: center;
-    width: 20px;
-    height: 20px;
-    font-size: large;
     
+    text-align: center;
+ 
+    font-size: large;
+  
 }
-.button {
-  align-self: flex-start;
-}
+
 
 #maincontainer {
    display: flex;
    justify-content: space-between;
+   margin: 20px;
+   border: 4px black;
 }
 #parkcontainer {
   display: inline-block;
   flex-direction: row;
+  border: 4px black;
   
 justify-content: center;
   width: 30%;
-  height: 200px;
+  height: 60vh;
   text-align: center;
   background-color: #5cb85c;
   opacity: .5;
@@ -94,8 +93,7 @@ justify-content: center;
     display: inline-block;
     justify-content: center;
     flex-direction: row;
-   
-    height: 200px;
+    height: 60vh;
     width: 40%;
     text-align: center;
     background-color: #5cb85c;
