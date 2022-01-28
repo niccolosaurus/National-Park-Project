@@ -10,13 +10,13 @@
 <body>
     <div id="nav">
         <button id="return" class="button">↞</button>
-        <h1 id="curretpark">Zion National</h1>
+        <h1 id="currentpark">Zion National</h1>
     </div>
     <div id="maincontainer">
 
         <div id = "parkcontainer">
-            <h1>Address</h1>
-            <h2>Hours</h2>
+            <h1 id = "address">Address</h1>
+            <h2 id = "hours">Hours</h2>
             <img id="minimap" src="./assets/pics/Map.PNG" alt="">
         </div>
 
@@ -29,11 +29,37 @@
             </div>
             <div id="events">
                 Events
-            </div>
+            </div> 
         </div>
     <div>
+        
  
-    <script src="result.js"></script>
- 
+
+<!--Modal-->
+<h2>Bottom Modal</h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+<!-- Modal content -->
+<div class="modal-content">
+    <div class="modal-header">
+        <span class="close">&times;</span>
+    <h2>Search Results</h2>
+    </div>
+    <div class="modal-body" id = 'modal-body'>
+        <!--Modal content goes here-->
+    </div>
+    <div class="modal-footer">
+        <h3>Modal Footer</h3>
+    </div>
+</div>
+
+<!--- </div> --> 
+<script src="result.js"></script>
+
 </body>
 </html>
