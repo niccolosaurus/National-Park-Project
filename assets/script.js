@@ -78,7 +78,7 @@ function submit() {
 
 
 //Search on Enter key
-submitSearch.addEventListener('keyup', function(event) {
+submitSearch.addEventListener('keydown', function(event) {
   if (event.keyCode === 13) {
     event.preventDefault;
 

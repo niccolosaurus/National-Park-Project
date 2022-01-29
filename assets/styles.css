@@ -1,5 +1,5 @@
 body {
-    /*background-image: url('https://source.unsplash.com/random/?national%20parks'); */
+    /* background-image: url('https://source.unsplash.com/random/?national%20parks'); */
     background-color: rgba(10, 34, 10, 0.849);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -39,6 +39,7 @@ body {
     color: white;
     border-radius: 30px;
     font-size: larger;
+    cursor: pointer;
 }
 
 map img {
@@ -58,7 +59,7 @@ map img {
   background-color: rgb(173, 173, 173);
 }
 
-#return {
+#return, #myBtn {
   background-color: rgb(161, 236, 161);
   opacity: .5;
   text-align: center;
@@ -66,7 +67,7 @@ map img {
   align-items: flex-start;
 }
 
-#currentpark { 
+#currentPark { 
     margin-left: auto;
     margin-right: auto;
 }
@@ -74,20 +75,28 @@ map img {
 #maincontainer {
  display: flex;
  justify-content: space-between;
- margin: 20px;
+ margin: 10px;
  border: 4px black;
 }
 
 #parkcontainer {
+
 display: inline-block;
 flex-direction: row;
 border: 4px black;
 justify-content: center;
 width: 30%;
-height: 60vh;
+height: max-content;
 text-align: center;
 background-color: #5cb85c;
 opacity: .5;
+}
+
+#parkPic {
+  margin-top: 1em;
+  border-radius: 5px;
+  width: 95%;
+  margin-bottom: .5em;
 }
 
 #sidecontainer {
@@ -98,7 +107,7 @@ opacity: .5;
   width: 40%;
   text-align: center;
   background-color: #5cb85c;
-opacity: .5;
+  opacity: .5;
 }
 
 #map{
@@ -109,9 +118,23 @@ opacity: .5;
 
 }
 
+.choice {
+  background-color: rgba(75, 172, 75, 0.5);
+  color: black;
+  border-radius: 20px;
+  text-decoration: none;
+  padding: 1em;
+  margin-bottom: .5em;
+}
 
+.choice a {
+  text-decoration: none;
+  color: black;
+}
 
-
+.icon {
+  border-radius: 15px;
+}
 
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -130,8 +153,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(255, 255, 255); /*Fallback color */
+  background-color: rgba(255, 255, 255); /*Black w/ opacity */
   -webkit-animation-name: fadeIn; /* Fade in the background */
   -webkit-animation-duration: 0.4s;
   animation-name: fadeIn;
@@ -199,6 +222,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
 @keyframes fadeIn {
   from {opacity: 0} 
   to {opacity: 1}
+}
+@media screen and (min-width: 720px) {
+  .maincontainer {
+    display: block;
+  }
 }
 
 
