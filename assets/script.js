@@ -23,7 +23,7 @@ function initMap() {
   
   fetchParksJSON().then(parks => {
    parks; // fetched parks
-   console.log(parks.data)
+   
    let parkData = parks.data
    for (let i=0; i < parkData.length; i++) {
     let name = parkData[i].fullName
@@ -50,18 +50,13 @@ function initMap() {
 //Use the code below in any function to pull the Nation Parks object.  Function must be "async".
 // var natParks = await pullNPSapi();
 
-// Make textbox blank instead of undefined
-// if (parkChoice) {
-//   parkChoice = "";
-// }
-
 //Fetch National Parks list from 
 async function pullNPSapi() {
 
   var response = await fetch('https://developer.nps.gov/api/v1/parks?limit=500&api_key=YzVVecqbLD53XVjKj3RLhIsTHcbfhwuYyq5vgYNI');
   var data = await response.json();
 
-  console.log(data);
+  
   return data;
 }
 
@@ -78,7 +73,7 @@ function submit() {
 
 
 //Search on Enter key
-submitSearch.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function(event) {
   if (event.keyCode === 13) {
     event.preventDefault;
 
@@ -115,7 +110,7 @@ for (let i=0; i < data.data.length; i++) {
 async function start() {
   let data = await pullNPSapi();
   let response = await natParks(data);
-  console.log(response);
+  
 }
 
 start();
