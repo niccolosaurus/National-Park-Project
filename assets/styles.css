@@ -1,190 +1,260 @@
 body {
-    background-image: url('https://source.unsplash.com/random/?national%20parks');
-    background-repeat: no-repeat;
-    background-size: 100%;
-
-    text-align: center;
+  background-image: linear-gradient(to bottom right,#444941, #7FC8A9);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-#searchBar {
-    background-color: rgba(46, 107, 46, 0.5);
-    width: 20%;
-    padding: 0 0 .75em 0;
-    border-radius: 10px;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 2em;
+.body-box {
+display: flex;
+flex-direction: column;
 }
 
-#header {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(46, 107, 46, 0.7);
-    border-radius: 10px 10px 0 0;
-    /* -webkit-text-stroke: black 1px; */
-    color: white;
-    font-size: large;
+.header-box {
+/* background-image: url(https://images.unsplash.com/photo-1558022103-603c34ab10ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9ycmVzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60); */
 }
 
-#parkSearch {
-    box-sizing: border-box;
-    width: 90%;
+.map-box{
 
-    font-size: larger;
-   
-}
-
-#submitSearch {
-    background-color: black;
-    color: white;
-    border-radius: 30px;
-    font-size: larger;
-}
-
-map img {
-    width: 50%;
-}
-#nav {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 75%;
-    text-align: center;
-    background-color: rgba(46, 107, 46, 0.5);
-    font-size: larger;
-    
-
-}
-#return:hover {
-    background-color: rgb(173, 173, 173);
-}
-#return {
-    background-color: rgb(161, 236, 161);
-    opacity: .5;
-    display: flex;
-    justify-content: flex-start;
-    
-  text-align: center;
-    width: 4vw;
-    height: 4vh;
-    font-size: larger
-    
-   
-    
-}
-button{
-     align-self: flex-start;
-      }
-
-#maincontainer {
-    display: flex;
-    justify-content: flex-start;
-    height: 600px;
-    width: 400px;
-    text-align: center;
-    
-    flex-direction: column;
-
-}
-#sidecontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 200px;
-    
+/* background-image: linear-gradient(to bottom right,#32502E, #01937C
+  );
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
 }
 
 #map{
-    height:75vh;
-    width:75vw;
-    
-    margin: 0 auto;
+height:75vh;
+width:95vw;
+margin-left: auto;
+margin-right: auto;
+display: block;
+}
+
+#searchBar {
+  background-color: #7FC8A9;
+  width: 20%;
+  padding: 0 0 .75em 0;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+#header {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #197163;
+  border-radius: 10px 10px 0 0;
+  /* -webkit-text-stroke: black 1px; */
+  color: white;
+  font-size: large;
+}
+
+#parkSearch {
+  box-sizing: border-box;
+  width: 90%;
+
+  font-size: larger;
+ 
+}
+
+#submitSearch {
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  font-size: larger;
+  cursor: pointer;
+}
+
+map img {
+  width: 70%;
+}
+
+#nav {
+display: flex;
+width: 100%;
+text-align: center;
+background-color: rgba(46, 107, 46, 0.5);
+font-size: larger;
+align-self: flex-start;
+background-image: url(https://images.unsplash.com/photo-1558022103-603c34ab10ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9ycmVzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60);
+color: white;
+}
+
+#return:hover {
+background-color: rgb(173, 173, 173);
+}
+
+#return, #myBtn {
+background-color: rgb(161, 236, 161);
+opacity: .5;
+text-align: center;
+font-size: large;
+align-items: flex-start;
+}
+
+#currentPark { 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#maincontainer {
+display: flex;
+justify-content: space-between;
+margin: 10px;
+border: 4px black;
+}
+
+#parkcontainer {
+
+display: inline-block;
+flex-direction: row;
+border: 4px black;
+justify-content: center;
+width: 30%;
+height: max-content;
+text-align: center;
+background-color: #5cb85c;
+opacity: .5;
+}
+
+#parkPic {
+margin-top: 1em;
+border-radius: 5px;
+width: 95%;
+margin-bottom: .5em;
+}
+
+#sidecontainer {
+display: inline-block;
+justify-content: center;
+flex-direction: row;
+height: 60vh;
+width: 40%;
+text-align: center;
+background-color: #5cb85c;
+opacity: .5;
+}
+
+#map{
+  height:75vh;
+  width:75vw;
+  
+  margin: 0 auto;
 
 }
 
+.choice {
+background-color: rgba(75, 172, 75, 0.5);
+color: black;
+border-radius: 20px;
+text-decoration: none;
+padding: 1em;
+margin-bottom: .5em;
+}
 
+.choice a {
+text-decoration: none;
+color: black;
+}
 
-
+.icon {
+border-radius: 15px;
+}
 
 body {font-family: Arial, Helvetica, sans-serif;}
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  -webkit-animation-name: fadeIn; /* Fade in the background */
-  -webkit-animation-duration: 0.4s;
-  animation-name: fadeIn;
-  animation-duration: 0.4s
+display: none; /* Hidden by default */
+position: absolute; /* Stay in place */
+/* z-index: 1; /* Sit on top */
+/* left: 0;
+top: 0; */
+width: 75%; 
+ height: 75%; 
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+
+
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(255, 255, 255); /*Fallback color */
+background-color: rgba(255, 255, 255); /*Black w/ opacity */
+-webkit-animation-name: fadeIn; /* Fade in the background */
+-webkit-animation-duration: 0.4s;
+animation-name: fadeIn;
+animation-duration: 0.4s
 }
 
 /* Modal Content */
 .modal-content {
-  position: fixed;
-  bottom: 0;
-  background-color: #fefefe;
-  width: 100%;
-  -webkit-animation-name: slideIn;
-  -webkit-animation-duration: 0.4s;
-  animation-name: slideIn;
-  animation-duration: 0.4s
+position: fixed;
+bottom: 0;
+background-color: #fefefe;
+width: 100%;
+height: 100%;
+-webkit-animation-name: slideIn;
+-webkit-animation-duration: 0.4s;
+animation-name: slideIn;
+animation-duration: 0.4s
 }
 
 /* The Close Button */
 .close {
-  color: white;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+color: white;
+float: right;
+font-size: 28px;
+font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+color: #000;
+text-decoration: none;
+cursor: pointer;
 }
 
 .modal-header {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
 }
 
 .modal-body {padding: 2px 16px;}
 
 .modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
 }
 
 /* Add Animation */
 @-webkit-keyframes slideIn {
-  from {bottom: -300px; opacity: 0} 
-  to {bottom: 0; opacity: 1}
+from {bottom: -300px; opacity: 0} 
+to {bottom: 0; opacity: 1}
 }
 
 @keyframes slideIn {
-  from {bottom: -300px; opacity: 0}
-  to {bottom: 0; opacity: 1}
+from {bottom: -300px; opacity: 0}
+to {bottom: 0; opacity: 1}
 }
 
 @-webkit-keyframes fadeIn {
-  from {opacity: 0} 
-  to {opacity: 1}
+from {opacity: 0} 
+to {opacity: 1}
 }
 
 @keyframes fadeIn {
-  from {opacity: 0} 
-  to {opacity: 1}
+from {opacity: 0} 
+to {opacity: 1}
+}
+@media screen and (min-width: 720px) {
+.maincontainer {
+  display: block;
+}
 }
 
 
