@@ -7,15 +7,10 @@
     <link rel="stylesheet" href="./assets/styles.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <title>National Park Search</title>
-    <style>
-        #map{
-            height:75vh;
-            width:100vw;
-        }
-    </style>
+    
 </head>
-<body>
-
+<body class="body-box">
+    <div class="header-box">
     <section id = 'searchBar'>
         <header id = 'header'>
             <h3>National Park Search</h3>
@@ -23,40 +18,18 @@
         <input type="text" id ='parkSearch'>
         <button id = 'submitSearch'>🔎︎</button>
     </section>
-    <div id='map'></div>
+    <div id='parkPic'></div>
+    </div>
     
+    <div class="map-box">
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApqZRVmuHP-PgyWy54eLsb6lOxuxlm0lQ&callback=initMap&libraries=&v=weekly"
       async
     ></script>
 
     <div id='map'></div>
-
-    
-    <h2>Bottom Modal</h2>
-
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span class="close">&times;</span>
-        <h2>Modal Header</h2>
-        </div>
-        <div class="modal-body">
-            <p>Some text in the Modal Body</p>
-            <p>Some other text...</p>
-        </div>
-        <div class="modal-footer">
-            <h3>Modal Footer</h3>
-        </div>
     </div>
 
-   <!--- </div> --> 
 
 
 
