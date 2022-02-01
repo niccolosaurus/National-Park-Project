@@ -85,8 +85,9 @@ function applyPark(pick) {
 
     //Picture of park
     var parkPic = document.getElementById('parkPic');
-    parkPic.src = pick.images[0].url;
-    parkPic.alt = pick.images[0].altText;
+    var picNumber = Math.floor(Math.random() * pick.images.length);
+    parkPic.src = pick.images[picNumber].url;
+    parkPic.alt = pick.images[picNumber].altText;
 
     //Park description
     var aboutPark = document.getElementById('aboutPark');

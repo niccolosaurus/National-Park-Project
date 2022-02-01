@@ -99,7 +99,6 @@ button:hover {
 }
 
 #parkcontainer {
-
 display: inline-block;
 border: 4px black;
 justify-content: center;
@@ -150,9 +149,7 @@ font-size: large;
 #map{
     height:75vh;
     width:75vw;
-    
     margin: 0 auto;
-
 }
 
 .choice {
@@ -164,12 +161,16 @@ font-size: large;
   margin-bottom: .5em;
 }
 
+.choice:hover {
+  cursor: pointer;
+  background-color: rgba(25, 83, 25, 0.5)
+}
+
 .choice a {
   text-decoration: none;
   color: black;
 }
 
-/* */
 #activities img {
   border-radius: 15px;
   margin: 0 .5em 0 .5em;
@@ -197,6 +198,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 
   overflow: auto; /* Enable scroll if needed */
+  overflow-y: auto; /* JRM: For mobile */
   background-color: rgb(255, 255, 255); /*Fallback color */
   background-color: rgba(255, 255, 255); /*Black w/ opacity */
   -webkit-animation-name: fadeIn; /* Fade in the background */
@@ -297,18 +299,24 @@ body {font-family: Arial, Helvetica, sans-serif;}
   line-height: 3;
   color: black;
   text-decoration: none;
+  margin: .5em;
+  padding: 1em;
 }
 
 .news-release a:active {
   line-height: 3;
   color: black;
   text-decoration: none;
+  margin: .5em;
+  padding: 1em;
 }
 
 .news-release a:visited {
   line-height: 3;
   color: black;
   text-decoration: none;
+  margin: .5em;
+  padding: 1em;
 }
 
 .news-release a:hover {
@@ -316,4 +324,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
   cursor: pointer;
   color: blue;
   text-decoration: none;
+  margin: .5em;
+  padding: 1em;
 }
