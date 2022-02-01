@@ -105,10 +105,10 @@ border: 4px black;
 justify-content: center;
 width: 30%;
 height: max-content;
+min-height: fit-content;
 text-align: center;
-background-color: #5cb85c;
-opacity: .5;
-
+background-color: #3a7c3a;
+/* opacity: .9; */
 font-size: large;
 }
 
@@ -133,11 +133,12 @@ font-size: large;
   display: inline-block;
   justify-content: center;
   flex-direction: row;
-  height: 60vh;
+  height: max-content;
   width: 40%;
   text-align: center;
-  background-color: #5cb85c;
-  opacity: .5;
+  /* background-color: #5cb85c; */
+  background-color: #3a7c3a;
+  /* opacity: .9; */
   font-size: large;
   text-align: center;
 }
