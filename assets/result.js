@@ -220,43 +220,52 @@ function parkChoices(parkChoices) {
                         var newsResults = await response.json(); // JRM: I changed from const to var to make it global--for applyParkNews function.
 
                         // JRM: This section puts the news release content (first 5 results) on result.html below Current News.
-                        var currentParkNews = document.getElementById('news-content');
-                        currentParkNews.textContent = '';
+                        var currentParkNews00 = document.getElementById('news-content00');
+                        currentParkNews00.textContent = '';
+                        var currentParkNews01 = document.getElementById('news-content01');
+                        currentParkNews01.textContent = '';
+                        var currentParkNews02 = document.getElementById('news-content02');
+                        currentParkNews02.textContent = '';
+                        var currentParkNews03 = document.getElementById('news-content03');
+                        currentParkNews03.textContent = '';
+                        var currentParkNews04 = document.getElementById('news-content04');
+                        currentParkNews04.textContent = '';
 
-                        var newsRelease00Link00 = document.createElement('p');
+                        
+                        var newsRelease00Link00 = document.createElement('a');
                         var newsTitle = document.createTextNode(newsResults.data[0].title);
                         newsRelease00Link00.appendChild(newsTitle);
                         newsRelease00Link00.title = newsTitle;
                         newsRelease00Link00.href = newsResults.data[0].url;
-                        currentParkNews.appendChild(newsRelease00Link00);
+                        currentParkNews00.appendChild(newsRelease00Link00);
 
-                        var newsRelease01Link01 = document.createElement('p');
+                        var newsRelease01Link01 = document.createElement('a');
                         var newsTitle = document.createTextNode(newsResults.data[1].title);
                         newsRelease01Link01.appendChild(newsTitle);
                         newsRelease01Link01.title = newsTitle;
                         newsRelease01Link01.href = newsResults.data[1].url;
-                        currentParkNews.appendChild(newsRelease01Link01);
+                        currentParkNews01.appendChild(newsRelease01Link01);
 
-                        var newsRelease02Link02 = document.createElement('p');
+                        var newsRelease02Link02 = document.createElement('a');
                         var newsTitle = document.createTextNode(newsResults.data[2].title);
                         newsRelease02Link02.appendChild(newsTitle);
                         newsRelease02Link02.title = newsTitle;
                         newsRelease02Link02.href = newsResults.data[2].url;
-                        currentParkNews.appendChild(newsRelease02Link02);
+                        currentParkNews02.appendChild(newsRelease02Link02);
 
-                        var newsRelease03Link03 = document.createElement('p');
+                        var newsRelease03Link03 = document.createElement('a');
                         var newsTitle = document.createTextNode(newsResults.data[3].title);
                         newsRelease03Link03.appendChild(newsTitle);
                         newsRelease03Link03.title = newsTitle;
                         newsRelease03Link03.href = newsResults.data[3].url;
-                        currentParkNews.appendChild(newsRelease03Link03);
+                        currentParkNews03.appendChild(newsRelease03Link03);
 
-                        var newsRelease04Link04 = document.createElement('p');
+                        var newsRelease04Link04 = document.createElement('a');
                         var newsTitle = document.createTextNode(newsResults.data[4].title);
                         newsRelease04Link04.appendChild(newsTitle);
                         newsRelease04Link04.title = newsTitle;
                         newsRelease04Link04.href = newsResults.data[4].url;
-                        currentParkNews.appendChild(newsRelease04Link04);
+                        currentParkNews04.appendChild(newsRelease04Link04);
 
 
                         
