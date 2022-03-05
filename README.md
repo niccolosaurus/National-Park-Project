@@ -1,28 +1,48 @@
-## Project 1: National Parks Search
+  # National Parks Project
 
-![front-page-w-markers](https://raw.githubusercontent.com/Seyaryu/National-Park-Project/main/assets/pics/front-page-w-markers.PNG)
+  ----
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-We created a webpage that pulls from the National Parks Service API, and then using the Google Maps API to plot the park locations. Latitude and longitude give the exact coordinates of the parks, they are shown with the tree icons on the map of the United States and its territories. 
+  ----
 
-![search-bar](https://raw.githubusercontent.com/Seyaryu/National-Park-Project/main/assets/pics/search-bar.PNG)
-The front page of the website contains a serach bar, so you can type in the parks that you would like to get more information on.
+### Description
+We created this to assist a user in finding National Parks all across the United States and territories.  It uses both Google Maps API and the NPS API.  You type in the park that you want to find on our first page and then by clicking enter or the search button it will take you to a second page. If there are multiple parks containing the same name it will open up a modal. Click the desired park. You will then be greeted with park info, address, hours, activities and news about the desired park.
 
-![full-map-w-markers](https://raw.githubusercontent.com/Seyaryu/National-Park-Project/main/assets/pics/full-map-w-markers.PNG)
-It also contains a full map of the world, centered on the United States and each of the tree markers are national parks throughout our country and the territories.  There are a total of 465 parks and map markers.
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contribution](#contribution)
+- [Test Instructions](#test-instructions)
+- [Questions](#questions)
 
-![working-modal](https://raw.githubusercontent.com/Seyaryu/National-Park-Project/main/assets/pics/working-modal.PNG)
-Once you type the park in the search bar it loads our second page which will open up a modal.  The reason for the modal is the park name can be referenced multiple times in the NPS API.  This allows the user to pick exactly what park they want. In the example shown the user types in "Yosemite National Park" and a total of 4 locations are shown.  So Yosemtie is referenced in three other parks. 
 
-![address](https://raw.githubusercontent.com/Seyaryu/National-Park-Project/main/assets/pics/address.PNG)
-![hours](https://raw.githubusercontent.com/Seyaryu/National-Park-Project/main/assets/pics/hours.PNG)
-![things-to-do](https://raw.githubusercontent.com/Seyaryu/National-Park-Project/main/assets/pics/things-to-do.PNG)
-![current-news](https://raw.githubusercontent.com/Seyaryu/National-Park-Project/main/assets/pics/News.PNG)
-Once the desired park is selected multiple pieces of information are displayed.  There is a section for the address, hours, things to do, and current news. 
 
-![back-to-map](https://raw.githubusercontent.com/Seyaryu/National-Park-Project/main/assets/pics/back-to-map.PNG)
-On our second page there is an arrow in the top right. If you click that it will take you back to the map and the search bar so you can find a new park.
+### Installation
+Clone or download the repo and open using your coding editor of choice.
 
-![reopens-modal](https://raw.githubusercontent.com/Seyaryu/National-Park-Project/main/assets/pics/reopens-modal.PNG)
-Our second page also contains "Back to Results" which will open up the modal if you would like to access some of the other parks that showed up in the original search. 
+### Usage
+![National-Park-gif](./assets/gif/National%20Parks%20Project.gif)
 
-https://seyaryu.github.io/National-Park-Project/
+
+### License
+MIT
+https://choosealicense.com/licenses/mit/
+
+### License Details
+
+MIT License
+
+Copyright (c) [2022] [NiccoloEck]
+
+### Contribution
+niccolosaurus(me)<br/> Seyaryu<br/> JayMoses01<br/> CarlosCastillo123
+
+### Test-Instructions
+n/a
+
+### Questions
+[Github Profie](https://github.com/niccolosaurus)<br/>
+nicco.eck@gmail.com<br/>
+https://seyaryu.github.io/National-Park-Project/<br/>
+https://drive.google.com/file/d/1rfGDvl99QFEeQ-qn3uR64FNYYW_9aLDU/view
